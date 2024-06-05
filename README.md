@@ -1,7 +1,6 @@
-# WinServer2016-2022
-Activar Windows Server 2016 - 2022
+# Activar Windows Server 2016 - 2022
 
-# Primero, verificar la verión a la que podemos hacer upgrade.
+# Primero, verificar la versión a la que podemos hacer upgrade.
 
 Para ver la versión a la que podemos actualizarla:
 
@@ -43,10 +42,29 @@ slmgr /ipk AquíVaTuLicencia
 
 slmgr /skms kms_server
 
-# Reemplaza kms_server con un servidor válido de KMS, por ahora funciona: kms9.msguides.com, y kms8.msguides.com.
+Reemplaza kms_server con un servidor válido de KMS, por ahora funciona: kms9.msguides.com, y kms8.msguides.com.
 
-Activa Windows
+# Activa Windows
 
 slmgr /ato
 
-Eso es todo. Ya tienes Windows Server activado permanentemente.
+# Eso es todo. Ya tienes Windows Server activado permanentemente.
+
+
+
+
+# MÉTODO PARA REACTIVAR WINDOWS SERVER A OTROS 180 DÍAS DE PRUEBA
+
+Microsoft permite REARMAR-REACTIVAR el periodo de evaluación de Windows Server (se puede hacer cada 6 meses), ampliándose otros 180 días.
+
+# Ejecutar Powershell como administrador
+slmgr.vbs /rearm
+
+Si se ha ejecutado correctamente, mostrará el mensaje:
+
+Windows Sript Host:
+Comando completado correctamente.
+
+# Reinicie el sistema para que los cambios se puedan aplicar.
+
+# Una vez reiniciado el Sistema, volveremos a tener otros 180 días de evaluación.
