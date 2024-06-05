@@ -1,6 +1,6 @@
 # Activar Windows Server 2016 - 2022
 
-# Primero, verificar la versión a la que podemos hacer upgrade.
+## Primero, verificar la versión a la que podemos hacer upgrade.
 
 Para ver la versión a la que podemos actualizarla:
 
@@ -8,7 +8,7 @@ Abrimos PowerShell o CMD como administrador
 
 DISM /Online /Get-TargetEditions
 
-# Una vez seleccionada la versión que deseamos, la establecemos.
+## Una vez seleccionada la versión que deseamos, la establecemos.
 
 DISM /online /Set-Edition:ServerStandard /ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /AcceptEula
 
@@ -34,17 +34,17 @@ Windows Server 2016 Essentials: JCKRF-N37P4-C2D82-9YXRT-4M63B
 
 Reinicia cuando lo solicite, para iniciar con la nueva versión.
 
-# Instalamaos nuestra clave KMS
+## Instalamos nuestra clave KMS
 
 slmgr /ipk AquíVaTuLicencia
 
-# Establece una dirección KMS.
+## Establece una dirección KMS.
 
 slmgr /skms kms_server
 
 Reemplaza kms_server con un servidor válido de KMS, por ahora funciona: kms9.msguides.com, y kms8.msguides.com.
 
-# Activa Windows
+## Activa Windows
 
 slmgr /ato
 
@@ -53,11 +53,11 @@ slmgr /ato
 
 
 
-# MÉTODO PARA REACTIVAR WINDOWS SERVER A OTROS 180 DÍAS DE PRUEBA
+# MÉTODO PARA REACTIVAR WINDOWS SERVER A OTROS 180 DÍAS DE EVALUACIÓN
 
 Microsoft permite REARMAR-REACTIVAR el periodo de evaluación de Windows Server (se puede hacer cada 6 meses), ampliándose otros 180 días.
 
-# Ejecutar Powershell como administrador
+## Ejecutar Powershell como administrador
 slmgr.vbs /rearm
 
 Si se ha ejecutado correctamente, mostrará el mensaje:
@@ -65,6 +65,6 @@ Si se ha ejecutado correctamente, mostrará el mensaje:
 Windows Sript Host:
 Comando completado correctamente.
 
-# Reinicie el sistema para que los cambios se puedan aplicar.
+## Reinicie el sistema para que los cambios se puedan aplicar.
 
 # Una vez reiniciado el Sistema, volveremos a tener otros 180 días de evaluación.
